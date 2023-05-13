@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+
+  color: #333;
+  /* background-image: linear-gradient(
+    to top left,
+    #753682 0%,
+    rgb(191, 46, 52) 100%
+  ); */
+  background: #062647;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 90vw;
+  min-height: 70vh;
+  margin: 0 auto;
+  padding: 8rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-image: linear-gradient(
+    to top left,
+    #783887bb 0%,
+    rgb(237 92 96 / 52%) 100%
+  ); */
+  /* background-image: linear-gradient(to top left, #062647 0%, #37618a 100%); */
+  background: #37618a;
+  /* padding: 0.7rem 2.5rem; */
+  border-radius: 1.2rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 20px;
+}
+.rules {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3.2rem;
+}
+
+.rules p {
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.rules span {
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.rules ol {
+  margin-bottom: 0.8rem;
+  margin-left: 2.4rem;
+}
+
+.rules ol li {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+
+.button {
+  --width: 80px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  /* --button-color: #e11d48; */
+  --button-color: #062647;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  border-radius: 0.75em;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: 0.25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,
+.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #f4f4f5;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #f4f4f5;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .button:hover {
+  background: #c0173b; 
+  background: #37618a;
+} */
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    max-width: 80rem;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 45%;
+  }
+
+  .container {
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: scroll;
+    padding: 3rem 4rem;
+  }
+
+  .rules {
+    overflow: scroll;
+  }
+}

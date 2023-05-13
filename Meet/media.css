@@ -1,0 +1,35 @@
+@media (max-width: 900px) {
+  body {
+    height: auto;
+  }
+  .container {
+    margin: auto 0;
+  }
+  .inner-box {
+    width: 80vw;
+    margin: 32px 0;
+  }
+
+  .inner-box h2 {
+    margin-bottom: 32px;
+  }
+
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 52px;
+    row-gap: 32px;
+  }
+
+  .team-members img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-members .name {
+    font-size: 16px;
+  }
+
+  .team-members .title {
+    font-size: 12px;
+  }
+}

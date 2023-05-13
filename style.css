@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+
+  color: #333;
+  background-image: linear-gradient(
+    to top left,
+    #753682 0%,
+    rgb(191, 46, 52) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90rem;
+  padding: 8rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to top left,
+    #783887bb 0%,
+    rgb(237 92 96 / 52%) 100%
+  );
+  /* padding: 0.7rem 2.5rem; */
+  border-radius: 1.2rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 5.4rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main a:link,
+a:visited {
+  text-decoration: none;
+
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main a:hover,
+.main a:active {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.links {
+  margin-top: 7rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+
+  display: flex;
+  gap: 1.8rem;
+}
+
+.links a:link,
+.links a:visited {
+  text-decoration: none;
+  color: #222;
+  border-bottom: 1px solid #333;
+  transition: 0.6s;
+  transition-property: all;
+}
+
+.links a:hover,
+.links a:active {
+  border: 0;
+}
+
+/* Responsive */
+
+@media (max-width: 920px) {
+  .container {
+    width: 70vw;
+  }
+
+  .container {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 770px) {
+  html {
+    font-size: 50%;
+  }
+
+  .main {
+    width: 90%;
+  }
+
+  .heading {
+    margin-bottom: 1.8rem;
+  }
+
+  .main a:link,
+  .main a:visited {
+    width: 100%;
+    padding: 0.7rem 0rem;
+  }
+}
+
+@media (max-width: 625px) {
+  .heading {
+    font-size: 4.4rem;
+  }
+
+  .main {
+    width: auto;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .main a:link,
+  .main a:visited {
+    font-size: 1.6rem;
+    padding: 0.7rem 2rem;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 525px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    padding: 6rem 3rem;
+  }
+
+  .heading {
+    font-size: 3.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .main a:link,
+  .main a:visited {
+    font-size: 1.4rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  body {
+    position: relative;
+  }
+
+  .container {
+    padding: 6rem 2rem;
+    position: absolute;
+    top: 20%;
+  }
+
+  .heading {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+  }
+
+  .main a:link,
+  .main a:visited {
+    padding: 0.6rem 1rem;
+    border-radius: 0.7rem;
+  }
+
+  .links {
+    position: absolute;
+    top: 65%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 6rem 1rem;
+  }
+
+  .heading {
+    font-size: 2.4rem;
+    margin-bottom: 4rem;
+  }
+
+  .main a:link,
+  .main a:visited {
+    border-radius: 0.6rem;
+  }
+}
